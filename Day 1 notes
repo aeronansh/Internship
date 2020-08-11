@@ -1,0 +1,41 @@
+What is enum in java ?
+
+Enumerations (in general) are generally a set of related constants. 
+
+They have been in other programming languages like C++ from beginning. BUT more powerful in Java.
+
+Supported in Java since  JDK 1.5 release.
+
+Enumeration in java is supported by keyword enum. enums are a special type of class that always extends java.lang.Enum.
+
+It's a combination of class & interface features.
+
+Why ?
+
+1. Helps to define constants.
+2. Adds type safety to constants.
+3.  You can't  iterate over all constant values from i/f but with enums you can.
+
+A simple usage will look like this:
+
+public/default enum Direction {
+   EAST,
+   WEST,
+   NORTH,
+   SOUTH        //optionally can end with ";"
+ }
+Here EAST, WEST, NORTH and SOUTH are implicitely of type
+public final static Direction EAST=new Direction("EAST",0) ---super("EAST",0); 
+public final static Direction WEST=new Direction("WEST",1) ---super("WEST",1); 
+
+Super class of all enums
+
+public abstract class Enum<E extends Enum<E>>
+extends Object
+implements Comparable<E>, Serializable
+
+ie. they are comparable and serializable implicitly. 
+All enum types in java are singleton by default. 
+So, you can compare enum types using ‘==’ operator also.
+
+---------------------------------------------------------------------------------------------------------------
