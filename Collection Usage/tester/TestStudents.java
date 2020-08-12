@@ -37,13 +37,10 @@ public class TestStudents {
 
 						break;
 						
-					case 2: // display present | absent
+					case 2: 
 						System.out.println("Enter roll no");
 						Student s = new Student(sc.next());
-						/*
-						 * System.out.println( students.contains(s)?"Present":"Absent");
-						 * 
-						 */ int index = students.indexOf(s);
+						int index = students.indexOf(s);
 						if (index == -1)
 							throw new StudentHandlingException("Student rec not found : ID invalid!!!");
 						System.out.println("Details " + students.get(index));
