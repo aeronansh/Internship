@@ -18,7 +18,7 @@ public class Student implements Comparable<Student> {
 		this.dob = dob;
 	}
 
-	// add overloaded constr to encap. PK
+	
 	public Student(String rollNo) {
 		super();
 		this.rollNo = rollNo;
@@ -49,12 +49,6 @@ public class Student implements Comparable<Student> {
 		// sorting based on roll no
 		System.out.println("in compare to");
 		return rollNo.compareTo(o.rollNo);
-		/*
-		 * if(marks < o.marks) return -1; if(marks==o.marks) return 0; return 1; int
-		 * ret=dob.compareTo(o.dob); if(ret == 0) { if(marks < o.marks) return -1;
-		 * if(marks==o.marks) return 0; return 1; ret=
-		 * ((Integer)marks).compareTo(o.marks); } return ret;
-		 */
 
 	}
 
